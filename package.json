@@ -11,7 +11,7 @@
     "build": "webpack",
     "watch": "webpack --watch",
     "start": "nodemon server/index.js",
-    "seed": "seed --db-name fec ./database/seed.js"
+    "seed": "node database/seed/reviews-seeder.js"
   },
   "dependencies": {
     "body-parser": "^1.19.0",
@@ -28,7 +28,13 @@
     "@babel/preset-env": "^7.11.5",
     "@babel/preset-react": "^7.10.4",
     "babel-loader": "^8.1.0",
+    "eslint": "^7.9.0",
+    "eslint-config-airbnb": "^18.2.0",
     "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-jsx-a11y": "^6.3.1",
+    "eslint-plugin-react": "^7.21.2",
+    "eslint-plugin-react-hooks": "^4.1.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
   }
