@@ -1,18 +1,19 @@
+/* eslint-disable no-console */
 /* eslint-disable camelcase */
 require('../index.js');
-const { User } = require('../models/user.js');
 const mongoose = require('mongoose');
 const faker = require('faker');
+const { User } = require('../models/user.js');
 
 const reviews = [];
-for (let i = 1; i <= 100; i++) {
-  let data = {
+for (let i = 1; i <= 100; i += 1) {
+  const data = {
     id: i,
-    user_data: []
+    user_data: [],
   };
 
-  for (let j = 0; j < Math.floor(Math.random() * 30) + 1; j++) {
-    let ran = Math.floor(Math.random() * 100) + 1;
+  for (let j = 0; j < Math.floor(Math.random() * 30) + 1; j += 1) {
+    const ran = Math.floor(Math.random() * 100) + 1;
     data.user_data.push(
       {
         username: faker.name.firstName(),
@@ -23,8 +24,8 @@ for (let i = 1; i <= 100; i++) {
         checkin: Math.floor(Math.random() * 5) + 1,
         accuracy: Math.floor(Math.random() * 5) + 1,
         location: Math.floor(Math.random() * 5) + 1,
-        value: Math.floor(Math.random() * 5) + 1
-      }
+        value: Math.floor(Math.random() * 5) + 1,
+      },
     );
   }
   reviews.push(data);
