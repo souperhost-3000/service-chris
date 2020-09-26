@@ -8,7 +8,7 @@ const { User } = require('../models/user.js');
 const reviews = [];
 for (let i = 1; i <= 100; i += 1) {
   const data = {
-    id: i,
+    listing_id: i,
     user_data: [],
   };
 
