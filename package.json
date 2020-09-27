@@ -5,7 +5,7 @@
   "author": "",
   "license": "",
   "engines": {
-    "node": ">=6.13.0"
+    "node": "10.15.3"
   },
   "scripts": {
     "build": "webpack",
@@ -13,6 +13,16 @@
     "start": "nodemon server/index.js",
     "seed": "node database/seed/reviews-seeder.js",
     "test": "jest"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.[t|j]sx?$": "babel-jest"
+    },
+    "setupFilesAfterEnv": ["jest-enzyme"],
+    "testEnvironment": "enzyme",
+    "testEnvironmentOptions": {
+      "enzymeAdapter": "react16"
+    }
   },
   "dependencies": {
     "@babel/polyfill": "^7.11.5",
@@ -32,6 +42,7 @@
     "@babel/core": "^7.11.6",
     "@babel/preset-env": "^7.11.5",
     "@babel/preset-react": "^7.10.4",
+    "babel-jest": "^26.3.0",
     "babel-loader": "^8.1.0",
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.5",
@@ -43,6 +54,7 @@
     "eslint-plugin-react": "^7.21.2",
     "eslint-plugin-react-hooks": "^4.1.2",
     "jest": "^26.4.2",
+    "jest-enzyme": "^7.1.2",
     "puppeteer": "^5.3.1"
   }
 }
