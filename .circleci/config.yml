@@ -4,5 +4,7 @@ orbs:
 workflows:
   node-tests:
     jobs:
+      - checkout
+      - node/start:
       - node/test:
         version: 10.15.3
