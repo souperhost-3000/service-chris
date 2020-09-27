@@ -12,6 +12,7 @@
     "watch": "webpack --watch",
     "start": "nodemon server/index.js",
     "seed": "node database/seed/reviews-seeder.js",
+    "server": "node server/index.js",
     "test": "jest"
   },
   "jest": {

@@ -8,7 +8,8 @@ jobs:
 
     steps:
       - checkout
-      - run: npm start
+      - run: npm install
+      - run: npm run server
       - run: npm test
 # workflows:
 #   node-tests:
