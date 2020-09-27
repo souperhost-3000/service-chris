@@ -2,17 +2,17 @@ version: 2.1
 orbs:
   node: circleci/node@4.0.1
 jobs:
-  build:
-    docker:
-      - image: circleci/node:10.15.3
+  # build:
+  #   docker:
+  #     - image: circleci/node:10.15.3
 
-    steps:
-      - checkout
-      - run: npm install
-      - run: npm run server
-      - run: npm test
-# workflows:
-#   node-tests:
-#     jobs:
-#       - node/test:
-#         version: 10.15.3
+  #   steps:
+  #     - checkout
+  #     - run: npm install
+  #     - run: npm run server
+  #     - run: npm test
+workflows:
+  node-tests:
+    jobs:
+      - node/test:
+        version: 10.15.3
