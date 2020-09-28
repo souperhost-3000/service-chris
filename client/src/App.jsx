@@ -3,8 +3,8 @@ import './style.css';
 
 function App() {
   return (
-    <div className="review">
-      Hello World!
+    <div>
+      Hello
     </div>
   );
 }
