@@ -1,6 +1,6 @@
 .review {
   font-family: 'Montserrat';
-  margin: 30px 20px 30px 20px;
+  margin: 40px 30px 40px 30px;
 }
 p {
   font-family: 'Montserrat', serif;
@@ -19,6 +19,6 @@ p {
 } */
 
 .star {
-  width: 26px;
-  height: 26px;
+  width: 20px;
+  height: 20px;
 }
