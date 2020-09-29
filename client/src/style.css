@@ -1,24 +1,25 @@
+body {
+  font-family: 'Montserrat';
+  padding-left: 80px;
+  padding-right: 80px;
+}
 .review {
-  font-family: 'Montserrat';
-  margin: 40px 30px 40px 30px;
+  padding-top: 48px;
+  padding-bottom: 48px;
+  max-width: 1120px;
+  margin-left: auto;
+  margin-right: auto;
 }
-p {
-  font-family: 'Montserrat', serif;
-  font-size: 12px;
-  font-weight: 600;
-  color: rgb(34, 34, 34);
-  background: green;
-}
-
-
-/* div {
-  font-family: 'Montserrat';
-  font-weight: 400;
-  color: rgb(113, 113, 113);
-  font-size: 16px;
-} */
 
 .star {
   width: 20px;
   height: 20px;
+}
+
+.general {
+  color: #222222;
+  padding-bottom: 32px;
+}
+
+.rating {
 }
