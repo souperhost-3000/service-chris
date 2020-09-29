@@ -12,6 +12,7 @@ body {
   margin-left: auto;
   margin-right: auto;
   line-height: 30px;
+  letter-spacing: 0.2px;
 }
 
 .general {
@@ -25,12 +26,12 @@ body {
 }
 
 .section{
-  -webkit-box-pack: start !important;
-  -webkit-box-align: stretch !important;
-  display: flex !important;
-  align-items: stretch !important;
-  justify-content: flex-start !important;
-  flex-wrap: wrap !important;
+  -webkit-box-pack: start;
+  -webkit-box-align: stretch;
+  display: flex;
+  align-items: stretch;
+  justify-content: flex-start;
+  flex-wrap: wrap;
   margin-bottom: 25px;
 }
 
@@ -39,45 +40,45 @@ body {
   padding-right: 8px;
   width: 40%;
   margin-right: 8%;
-  -webkit-box-pack: justify !important;
-  -webkit-box-align: center !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: space-between !important;
+  -webkit-box-pack: justify;
+  -webkit-box-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .rateName {
   width: 100%;
-  overflow: hidden !important;
-  text-overflow: ellipsis !important;
-  white-space: nowrap !important;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .bar {
-  width: 50% !important;
-  -webkit-box-align: center !important;
-  -webkit-box-direction: normal !important;
-  -webkit-box-orient: horizontal !important;
-  display: flex !important;
-  flex-direction: row !important;
-  align-items: center !important;
-  margin-left: 12px !important;
+  width: 50%;
+  -webkit-box-align: center;
+  -webkit-box-direction: normal;
+  -webkit-box-orient: horizontal;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: 12px;
 }
 
 .barRating {
-  position: relative !important;
-  height: 4px !important;
-  width: 100% !important;
-  margin-right: 4px !important;
-  background: rgb(221, 221, 221) !important;
-  border-radius: 2px !important;
+  position: relative;
+  height: 4px;
+  width: 100%;
+  margin-right: 4px;
+  background: rgb(221, 221, 221);
+  border-radius: 2px;
 }
 .fill {
-  position: absolute !important;
-  top: 0px !important;
-  left: 0px !important;
-  bottom: 0px !important;
-  border-radius: 2px !important;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  border-radius: 2px;
   background: #222222;
   width: 0%;
 }
@@ -96,6 +97,8 @@ body {
   padding-left: 8px;
   padding-right: 8px;
   margin-bottom: 12px;
+  line-height: 23px;
+  font-weight: 400;
 }
 
 .userReviewTop {
@@ -127,4 +130,14 @@ img {
   color: rgb(113, 113, 113);
   font-weight: 400;
   font-size: 14px;
+}
+
+.readMore {
+  font-family: 'Montserrat';
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  background: none;
+  text-decoration: underline;
+  font-weight: 500;
 }

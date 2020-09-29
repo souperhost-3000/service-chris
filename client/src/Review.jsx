@@ -1,7 +1,15 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import moment from 'moment';
 
 function Review({ review }) {
+  const body = review.review;
+  const [readMore, setReadMore] = useState(false);
+  useEffect(() => {
+    if (body.length > 180 && !readMore) {
+      setReadMore(true);
+    }
+  }, [review]);
+
   return (
     <div className="userReview">
       <div className="userReviewTop">
@@ -16,7 +24,14 @@ function Review({ review }) {
         </div>
       </div>
       <div className="userReviewBottom">
-        {review.review}
+        {readMore
+          ? (
+            <div>
+              {`${body.slice(0, 180)}... `}
+              <button type="button" className="readMore" onClick={() => { setReadMore(!readMore); }}>read more</button>
+            </div>
+          )
+          : body}
       </div>
     </div>
   );
