@@ -19,6 +19,6 @@
         "react"
     ],
     "rules": {
-        // "import/extensions": "off"
+        "react/prop-types": 0
     }
 }

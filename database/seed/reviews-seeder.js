@@ -12,19 +12,20 @@ for (let i = 1; i <= 100; i += 1) {
     user_data: [],
   };
 
-  for (let j = 0; j < Math.floor(Math.random() * 30) + 1; j += 1) {
+  for (let j = 0; j < Math.floor(Math.random() * 200) + 1; j += 1) {
     const ran = Math.floor(Math.random() * 100) + 1;
     data.user_data.push(
       {
         username: faker.name.firstName(),
         image: `https://ghrsea12-fec.s3-us-west-2.amazonaws.com/sample/pic${ran}.jpg`,
-        review: faker.lorem.sentence(),
+        review: faker.lorem.sentences(),
         cleanliness: Math.floor(Math.random() * 5) + 1,
         communication: Math.floor(Math.random() * 5) + 1,
         checkin: Math.floor(Math.random() * 5) + 1,
         accuracy: Math.floor(Math.random() * 5) + 1,
         location: Math.floor(Math.random() * 5) + 1,
         value: Math.floor(Math.random() * 5) + 1,
+        createdAt: Date(),
       },
     );
   }

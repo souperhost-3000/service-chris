@@ -1,7 +1,7 @@
 /* eslint-disable */
 import React from 'react';
 import { shallow, mount, render } from 'enzyme';
-import App from '../App';
+import App from '../src/App';
 
 describe('First React component test with Enzyme', () => {
   it('renders without crashing', () => {
