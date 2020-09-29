@@ -1,9 +1,9 @@
 import React from 'react';
 
-function Total({ ratings, totalReview }) {
+function ModalRatings({ ratings, totalReview }) {
   return (
-    <div className="general">
-      <section>
+    <div className="modalLeft">
+      <div className="modalGeneral">
         <h2>
           <span>
             <img className="star" src="https://ghrsea12-fec.s3-us-west-2.amazonaws.com/sample/star.png" alt="" />
@@ -12,9 +12,12 @@ function Total({ ratings, totalReview }) {
             {`${ratings.totalAvg} (${totalReview} reviews)`}
           </span>
         </h2>
-      </section>
+      </div>
+      <div className="modalRatings">
+
+      </div>
     </div>
   );
 }
 
-export default Total;
+export default ModalRatings;

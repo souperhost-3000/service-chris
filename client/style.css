@@ -4,6 +4,15 @@ body {
   padding-right: 80px;
 }
 
+button {
+  font-family: 'Montserrat';
+}
+
+h2 {
+  font-size: 23px;
+  font-weight: 500;
+}
+
 .review {
   color: #222222;
   padding-top: 48px;
@@ -26,10 +35,7 @@ body {
 }
 
 .section{
-  -webkit-box-pack: start;
-  -webkit-box-align: stretch;
   display: flex;
-  align-items: stretch;
   justify-content: flex-start;
   flex-wrap: wrap;
   margin-bottom: 25px;
@@ -40,8 +46,6 @@ body {
   padding-right: 8px;
   width: 40%;
   margin-right: 8%;
-  -webkit-box-pack: justify;
-  -webkit-box-align: center;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -56,9 +60,6 @@ body {
 
 .bar {
   width: 50%;
-  -webkit-box-align: center;
-  -webkit-box-direction: normal;
-  -webkit-box-orient: horizontal;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -133,11 +134,82 @@ img {
 }
 
 .readMore {
-  font-family: 'Montserrat';
   font-size: 16px;
   cursor: pointer;
   border: none;
   background: none;
   text-decoration: underline;
   font-weight: 500;
+}
+
+.modalButton {
+  font-family: 'Montserrat';
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 1px solid rgb(34, 34, 34);
+  padding: 13px 23px;
+  background: rgb(255, 255, 255);
+}
+
+.modal {
+  position: fixed;
+  visibility: visible;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  padding: 40px;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+}
+
+.modalSetting {
+  position: relative;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 1032px;
+  max-height: 100%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  box-shadow: rgba(0, 0, 0, 0.28) 0px 8px 28px;
+}
+
+.close {
+  cursor: pointer;
+  border: none;
+  background: none;
+  position: absolute;
+  font-size: 18px;
+  left: 32px;
+  top: 24px;
+}
+
+.space {
+  margin-bottom: 72px;
+}
+.modalContent {
+  padding: 24px;
+  margin-left: -8px;
+  margin-right: -8px;
+}
+
+.modalLeft {
+  margin-top: -24px;
+  width: 35%;
+  float: left;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.modalRight {
+  width: 57%;
+  float: left;
+  margin-left: 8%;
 }
