@@ -1,4 +1,5 @@
 import React from 'react';
+import moment from 'moment';
 
 function Review({ review }) {
   return (
@@ -10,7 +11,7 @@ function Review({ review }) {
         <div className="username">
           {review.username}
           <div className="date">
-            August 2019
+            {moment(review.createdAt).format('MMMM YYYY')}
           </div>
         </div>
       </div>

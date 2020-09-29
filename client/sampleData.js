@@ -10,6 +10,7 @@ const sampleData = {
       accuracy: 0,
       location: 0,
       value: 0,
+      createdAt: Date(),
     },
   ],
 };

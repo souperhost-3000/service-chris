@@ -36,6 +36,7 @@
     "body-parser": "^1.19.0",
     "express": "^4.17.1",
     "faker": "^5.1.0",
+    "moment": "^2.29.0",
     "mongoose": "^5.10.6",
     "nodemon": "^2.0.4",
     "path": "^0.12.7",
