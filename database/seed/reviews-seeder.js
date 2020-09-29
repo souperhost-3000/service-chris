@@ -12,7 +12,7 @@ for (let i = 1; i <= 100; i += 1) {
     user_data: [],
   };
 
-  for (let j = 0; j < Math.floor(Math.random() * 30) + 1; j += 1) {
+  for (let j = 0; j < Math.floor(Math.random() * 200) + 1; j += 1) {
     const ran = Math.floor(Math.random() * 100) + 1;
     data.user_data.push(
       {
