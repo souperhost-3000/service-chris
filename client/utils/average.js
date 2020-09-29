@@ -11,6 +11,7 @@ const average = ({ user_data }) => {
     totalAvg: 0,
   };
 
+  const keys = Object.keys(resultObject);
   for (let i = 0; i < user_data.length; i += 1) {
     resultObject.cleanliness += user_data[i].cleanliness;
     resultObject.communication += user_data[i].communication;
@@ -20,17 +21,16 @@ const average = ({ user_data }) => {
     resultObject.value += user_data[i].value;
 
     if (i === user_data.length - 1) {
-      const keys = Object.keys(resultObject);
-      for (let j = 0; j < keys.length; j += 1) {
+      for (let j = 0; j < keys.length - 1; j += 1) {
         resultObject[keys[j]] /= n;
-        resultObject[keys[j]] = Number(resultObject[keys[j]].toFixed(1));
+        resultObject[keys[j]] = resultObject[keys[j]].toFixed(1);
       }
     }
   }
-  resultObject.totalAvg = (resultObject.cleanliness
-    + resultObject.checkin + resultObject.communication
-    + resultObject.accuracy + resultObject.location
-    + resultObject.value) / 6;
+  resultObject.totalAvg = (Number(resultObject.cleanliness)
+    + Number(resultObject.checkin) + Number(resultObject.communication)
+    + Number(resultObject.accuracy) + Number(resultObject.location)
+    + Number(resultObject.value)) / 6;
   resultObject.totalAvg = Number(resultObject.totalAvg.toFixed(2));
 
   return resultObject;

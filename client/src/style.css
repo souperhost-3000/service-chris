@@ -3,12 +3,20 @@ body {
   padding-left: 80px;
   padding-right: 80px;
 }
+
 .review {
+  color: #222222;
   padding-top: 48px;
   padding-bottom: 48px;
   max-width: 1120px;
   margin-left: auto;
   margin-right: auto;
+  line-height: 30px;
+}
+
+.general {
+  color: #222222;
+  padding-bottom: 10px;
 }
 
 .star {
@@ -16,10 +24,67 @@ body {
   height: 20px;
 }
 
-.general {
-  color: #222222;
-  padding-bottom: 32px;
+.rating {
+  -webkit-box-pack: start !important;
+  -webkit-box-align: stretch !important;
+  display: flex !important;
+  align-items: stretch !important;
+  justify-content: flex-start !important;
+  flex-wrap: wrap !important;
 }
 
-.rating {
+.rate {
+  padding-left: 8px;
+  padding-right: 8px;
+  width: 40%;
+  margin-right: 8.3333%;
+  -webkit-box-pack: justify !important;
+  -webkit-box-align: center !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+}
+
+.rateName {
+  width: 100%;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  white-space: nowrap !important;
+}
+
+.bar {
+  width: 50% !important;
+  -webkit-box-align: center !important;
+  -webkit-box-direction: normal !important;
+  -webkit-box-orient: horizontal !important;
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  margin-left: 12px !important;
+}
+
+.barRating {
+  position: relative !important;
+  height: 4px !important;
+  width: 100% !important;
+  margin-right: 4px !important;
+  background: rgb(221, 221, 221) !important;
+  border-radius: 2px !important;
+}
+.fill {
+  position: absolute !important;
+  top: 0px !important;
+  left: 0px !important;
+  bottom: 0px !important;
+  border-radius: 2px !important;
+  background: #222222;
+  width: 0%;
+}
+
+.barRatingNum {
+  color: rgb(34, 34, 34);
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 16px;
+  margin-left: 6px;
 }
