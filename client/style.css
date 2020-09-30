@@ -84,6 +84,7 @@ h2 {
   background: rgb(221, 221, 221);
   border-radius: 2px;
 }
+
 .fill {
   position: absolute;
   top: 0px;
@@ -187,7 +188,6 @@ img {
   animation-iteration-count: 1;
   animation-fill-mode: both;
   animation-name: fadeOut;
-  z-index: -1;
 }
 
 .modalSetting {
@@ -212,7 +212,6 @@ img {
   animation-iteration-count: 1;
   animation-fill-mode: both;
   animation-name: slideOut;
-  z-index: -1;
 }
 
 .close {
@@ -301,18 +300,22 @@ img {
 
 @keyframes slideOut {
   from {
+    z-index: 5;
     bottom: 0;
   }
   to {
+    z-index: -1;
     bottom: -150vh;
   }
 }
 
 @keyframes fadeOut {
   from {
+    z-index: 5;
     opacity: 1;
   }
   to {
+    z-index: -1;
     opacity: 0;
   }
 }
