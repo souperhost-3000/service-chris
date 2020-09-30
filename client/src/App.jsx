@@ -5,6 +5,7 @@ import Total from './Total';
 import Ratings from './Ratings';
 import Reviews from './Reviews';
 import ModalRatings from './ModalRatings';
+import ModalReviews from './ModalReviews';
 import sampleData from '../sampleData';
 import average from '../utils/average';
 
@@ -40,9 +41,7 @@ function App() {
               </div>
               <div className="modalContent">
                 <ModalRatings ratings={ratings} totalReview={reviewData.user_data.length} />
-                <div className="modalRight">
-                  WOlrd
-                </div>
+                <ModalReviews reviews={reviewData.user_data} />
               </div>
             </div>
           </div>
