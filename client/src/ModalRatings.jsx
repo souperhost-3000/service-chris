@@ -31,7 +31,7 @@ function ModalRatings({ ratings, totalReview }) {
             <div className="rateName">
               {rating.charAt(0).toUpperCase() + rating.slice(1)}
             </div>
-            <div className="bar">
+            <div className="modalBar">
               <div className="barRating">
                 <span className="fill" style={widthBar(ratings[rating])}> </span>
               </div>

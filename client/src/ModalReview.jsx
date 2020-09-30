@@ -1,11 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import moment from 'moment';
 
-function ModalReview(review) {
+function ModalReview({ review }) {
   const body = review.review;
   const [readMore, setReadMore] = useState(false);
+  useEffect(() => {
+    if (body.length > 180) {
+      setReadMore(true);
+    }
+  }, [review]);
+
   return (
-    <div className="userReview">
+    <div className="modalUserReview">
       <div className="userReviewTop">
         <div className="profile">
           <img src={review.image} alt="" />
@@ -18,7 +24,16 @@ function ModalReview(review) {
         </div>
       </div>
       <div className="userReviewBottom">
-
+        {readMore
+          ? (
+            <div>
+              {`${body.slice(0, 180)}... `}
+              <button type="button" className="readMore" onClick={() => setReadMore(false)}>
+                read more
+              </button>
+            </div>
+          )
+          : body}
       </div>
     </div>
   );

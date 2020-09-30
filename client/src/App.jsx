@@ -12,6 +12,8 @@ import average from '../utils/average';
 function App() {
   const [reviewData, setData] = useState(sampleData);
   const [isShowing, setIsShowing] = useState(false);
+  const [close, setClose] = useState(false);
+
   useEffect(() => {
     const ranId = Math.floor(Math.random() * 100 + 1);
     axios.get(`/api/reviews/${ranId}`)
@@ -20,6 +22,12 @@ function App() {
   }, []);
 
   const ratings = average(reviewData);
+  function clickOutside(e) {
+    if (e.target.className === 'modal') {
+      setIsShowing(false);
+      setClose(true);
+    }
+  }
   return (
     <div className="review">
       <Total ratings={ratings} totalReview={reviewData.user_data.length} />
@@ -30,24 +38,34 @@ function App() {
         <Reviews reviews={reviewData.user_data} />
       </div>
       <div>
-        <button type="button" className="modalButton" onClick={() => { setIsShowing(true); }}>{`Show all ${reviewData.user_data.length} reviews`}</button>
+        <button type="button" className="modalButton" onClick={() => { setIsShowing(true); setClose(false); }}>{`Show all ${reviewData.user_data.length} reviews`}</button>
       </div>
-      {isShowing
-        ? (
-          <div className="modal">
-            <div className="modalSetting">
-              <div className="space">
-                <button type="button" className="close" onClick={() => { setIsShowing(false); }}>X</button>
-              </div>
-              <div className="modalContent">
-                <ModalRatings ratings={ratings} totalReview={reviewData.user_data.length} />
-                <ModalReviews reviews={reviewData.user_data} />
-              </div>
-            </div>
+      {isShowing && (
+      <div className="modal" onClick={(e) => { clickOutside(e); }}>
+        <div className={`modalSetting ${isShowing ? 'show' : 'hide'}`}>
+          <div className="space">
+            <button type="button" className="close" onClick={() => { setIsShowing(false); setClose(true); }}>X</button>
           </div>
-        )
-        : null}
-
+          <div className="modalContent">
+            <ModalRatings ratings={ratings} totalReview={reviewData.user_data.length} />
+            <ModalReviews reviews={reviewData.user_data} />
+          </div>
+        </div>
+      </div>
+      )}
+      {close && (
+      <div className="modal hide">
+        <div className={`modalSetting ${isShowing ? 'show' : 'hide'}`}>
+          <div className="space">
+            <button type="button" className="close" onClick={() => { setIsShowing(false); setClose(true); }}>X</button>
+          </div>
+          <div className="modalContent">
+            <ModalRatings ratings={ratings} totalReview={reviewData.user_data.length} />
+            <ModalReviews reviews={reviewData.user_data} />
+          </div>
+        </div>
+      </div>
+      )}
     </div>
   );
 }
