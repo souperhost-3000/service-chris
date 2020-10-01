@@ -1,5 +1,4 @@
 /* eslint-disable */
-import React from 'react';
 import { shallow, mount, render } from 'enzyme';
 import App from '../src/App';
 import Total from '../src/Total';
@@ -14,9 +13,7 @@ describe('<App> Component', () => {
   })
 
   it('renders without crashing', () => {
-    shallow(<App />);
-    console.log(mount(<App />).debug());
-    console.log(render(<App />))
+    wrapper;
   });
 
   it('renders <Total /> component', () => {
@@ -31,14 +28,6 @@ describe('<App> Component', () => {
     expect(wrapper.find(Reviews).length).toEqual(1);
   });
 
-  it('renders a button that pops up the modal"', () => {
-    expect(wrapper.find('.modalButton')).toExist();
-  })
-
-  it('should find a modal class when the button is clicked', () => {
-    wrapper.find('.modalButton').simulate('click');
-    expect(wrapper.find('.modal')).toExist();
-  })
   // it('Should contain div with Hello World!', () => {
   //   let wrapper = shallow(<App />);
   //   expect(wrapper.contains(<div className='review'>Hello World!</div>)).toBe(true);

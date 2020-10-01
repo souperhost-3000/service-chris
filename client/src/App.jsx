@@ -55,7 +55,7 @@ function App() {
       )}
       {close && (
       <div className="modal hide">
-        <div className={`modalSetting ${isShowing ? 'show' : 'hide'}`}>
+        <div className="modalSetting hide">
           <div className="space">
             <button type="button" className="close" onClick={() => { setIsShowing(false); setClose(true); }}>X</button>
           </div>
