@@ -1,12 +1,33 @@
 /* eslint-disable */
-import React from 'react';
 import { shallow, mount, render } from 'enzyme';
 import App from '../src/App';
+import Total from '../src/Total';
+import Ratings from '../src/Ratings';
+import Reviews from '../src/Reviews';
 
-describe('First React component test with Enzyme', () => {
+describe('<App> Component', () => {
+  let wrapper;
+
+  beforeEach(() => {
+    wrapper = shallow(<App />);
+  })
+
   it('renders without crashing', () => {
-    shallow(<App />);
+    wrapper;
   });
+
+  it('renders <Total /> component', () => {
+    expect(wrapper.find(Total).length).toEqual(1);
+  });
+
+  it('renders <Ratings /> component', () => {
+    expect(wrapper.find(Ratings).length).toEqual(1);
+  });
+
+  it('renders <Reviews /> component', () => {
+    expect(wrapper.find(Reviews).length).toEqual(1);
+  });
+
   // it('Should contain div with Hello World!', () => {
   //   let wrapper = shallow(<App />);
   //   expect(wrapper.contains(<div className='review'>Hello World!</div>)).toBe(true);
