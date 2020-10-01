@@ -1,8 +1,9 @@
+/* eslint-disable */
 import { shallow, mount, render } from 'enzyme';
 import Review from '../src/Review';
 
 describe ('<Review /> Component', () => {
-  it('should render', () => {
+  it('should render username, profile picture, and review', () => {
     const data = {
       username: 'Wanda',
       image: 'https://ghrsea12-fec.s3-us-west-2.amazonaws.com/sample/pic24.jpg',
@@ -16,6 +17,7 @@ describe ('<Review /> Component', () => {
       createdAt: Date(),
     };
     const wrapper = shallow(<Review review={data}/>);
-    console.log(wrapper.debug())
+    console.log(wrapper.debug());
+    expect(wrapper.find('div').toBe(true))
   });
 });
