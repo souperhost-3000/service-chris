@@ -42,7 +42,7 @@ function App() {
       </div>
       {isShowing && (
       <div className="modal" onClick={(e) => { clickOutside(e); }}>
-        <div className={`modalSetting ${isShowing ? 'show' : 'hide'}`}>
+        <div className={`modalSetting ${isShowing ? '' : 'hide'}`}>
           <div className="space">
             <button type="button" className="close" onClick={() => { setIsShowing(false); setClose(true); }}>X</button>
           </div>
