@@ -49,6 +49,12 @@ h2 {
   justify-content: flex-start;
   flex-wrap: wrap;
   margin-bottom: 25px;
+  margin-left: -8px;
+  margin-right: -8px;
+}
+
+.ratings {
+  display: none;
 }
 
 .rate {
@@ -104,7 +110,7 @@ h2 {
 }
 
 .userReview {
-  width: 40%;
+  width: 100%;
   margin-right: 8%;
   padding-left: 8px;
   padding-right: 8px;
@@ -278,6 +284,40 @@ img {
   margin-bottom: 40px;
   line-height: 24px;
   font-weight: 400;
+}
+
+@media (min-width: 1128px) {
+  body {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+  .userReview {
+    width: 40%;
+  }
+  .rate {
+    width: 40%;
+  }
+}
+
+@media (min-width: 744px) {
+  body {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  .ratings {
+    display: block
+  }
+  .rate {
+    width: 39%;
+    margin-right: 5%;
+  }
+}
+
+@media (min-width: 375px) {
+  body {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
 }
 
 @keyframes slideIn {
