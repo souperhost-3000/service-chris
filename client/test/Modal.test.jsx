@@ -15,5 +15,6 @@ describe('Modal Testing', () => {
     expect(wrapper.find('.modal')).toExist();
     wrapper.find('.close').simulate('click');
     expect(wrapper.find('.modal.hide')).toExist();
+
   })
 })

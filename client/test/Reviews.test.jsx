@@ -1,6 +1,7 @@
 /* eslint-disable */
 import { shallow, mount, render } from 'enzyme';
 import Review from '../src/Review';
+import moment from 'moment';
 
 describe ('<Review /> Component', () => {
   it('should render username, profile picture, and review', () => {
@@ -17,7 +18,10 @@ describe ('<Review /> Component', () => {
       createdAt: Date(),
     };
     const wrapper = shallow(<Review review={data}/>);
-    console.log(wrapper.debug());
-    expect(wrapper.find('div').toBe(true))
+    expect(wrapper.find('.username').text()).toContain(data.username)
+    expect(wrapper.find('.username').text()).toContain(moment(data.createdAt).format('MMMM YYYY'));
+    expect(wrapper.find('.profile').html()).toContain('img')
+    expect(wrapper.find('.userReviewBottom').text()).toEqual(data.review);
+
   });
 });
