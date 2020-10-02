@@ -1,8 +1,9 @@
+/* eslint-disable object-curly-newline */
 import React from 'react';
 import ModalReview from './ModalReview';
 import Search from './Search';
 
-function ModalReviews({ reviews, searchClick, search }) {
+function ModalReviews({ reviews, searchClick, isSearched, search }) {
   return (
     <div className="modalRight">
       <div className="search">
@@ -10,7 +11,7 @@ function ModalReviews({ reviews, searchClick, search }) {
       </div>
       <div>
         {reviews.map((review) => (
-          <ModalReview review={review} />
+          <ModalReview review={review} isSearched={isSearched} />
         ))}
       </div>
     </div>

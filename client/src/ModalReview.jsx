@@ -1,9 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import moment from 'moment';
 
-function ModalReview({ review }) {
+function ModalReview({ review, isSearched }) {
   const body = review.review;
   const [readMore, setReadMore] = useState(false);
+  function makeHtml(data) {
+    return { __html: data };
+  }
+
   useEffect(() => {
     if (body.length > 180) {
       setReadMore(true);
@@ -24,7 +28,9 @@ function ModalReview({ review }) {
         </div>
       </div>
       <div className="userReviewBottom">
-        {readMore
+        {isSearched && <div dangerouslySetInnerHTML={makeHtml(body)} />}
+        {/* <div dangerouslySetInnerHTML={makeHtml(body)} /> */}
+        {/* {readMore
           ? (
             <div>
               {`${body.slice(0, 180)}... `}
@@ -33,7 +39,15 @@ function ModalReview({ review }) {
               </button>
             </div>
           )
-          : body}
+          : body} */}
+        {!isSearched && (readMore ? (
+          <div>
+            {`${body.slice(0, 180)}... `}
+            <button type="button" className="readMore" onClick={() => setReadMore(false)}>
+              read more
+            </button>
+          </div>
+        ) : body)}
       </div>
     </div>
   );

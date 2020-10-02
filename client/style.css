@@ -351,6 +351,10 @@ input {
   font-weight: 400;
 }
 
+.mark {
+  background-color: yellow;
+}
+
 @media (min-width: 1128px) {
   body {
     padding-left: 80px;

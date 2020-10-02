@@ -15,6 +15,7 @@ function App() {
   const [close, setClose] = useState(false);
   const [searchClick, setSearchClick] = useState(false);
   const [searchData, setSearchData] = useState(undefined);
+  const [isSearched, setIsSearched] = useState(false);
 
   useEffect(() => {
     const ranId = Math.floor(Math.random() * 100 + 1);
@@ -24,15 +25,28 @@ function App() {
   }, []);
 
   const ratings = average(reviewData);
-  const search = (value) => {
+  function search(value) {
+    if (value === '') {
+      setSearchData(undefined);
+      setIsSearched(false);
+      return;
+    }
     const data = { user_data: [] };
     for (let i = 0; i < reviewData.user_data.length; i += 1) {
-      if (reviewData.user_data[i].review.includes(value)) {
-        data.user_data.push(reviewData.user_data[i]);
+      let tt = '';
+      const idx = reviewData.user_data[i].review.indexOf(value);
+      if (idx !== -1 && value !== '') {
+        tt += reviewData.user_data[i].review.slice(0, idx);
+        tt += `<mark>${value}</mark>`;
+        tt += reviewData.user_data[i].review.slice(idx + value.length);
+        const copyData = Object.create(reviewData.user_data[i]);
+        copyData.review = tt;
+        data.user_data.push(copyData);
       }
     }
     setSearchData(data);
-  };
+    setIsSearched(true);
+  }
 
   function clickOutside(e) {
     if (e.target.className === 'modal') {
@@ -73,6 +87,7 @@ function App() {
               reviews={searchData ? searchData.user_data : reviewData.user_data}
               searchClick={searchClick}
               search={search}
+              isSearched={isSearched}
             />
           </div>
         </div>
