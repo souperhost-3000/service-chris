@@ -1,3 +1,4 @@
+/* eslint-disable react/no-array-index-key */
 /* eslint-disable object-curly-newline */
 import React from 'react';
 import ModalReview from './ModalReview';
@@ -10,9 +11,9 @@ function ModalReviews({ reviews, searchClick, isSearched, search }) {
         <Search searchClick={searchClick} search={search} />
       </div>
       <div>
-        {reviews.map((review) => (
+        {reviews.map((review, idx) => (
           <ModalReview
-            key={review.username + review.createdAt}
+            key={review.username + idx}
             review={review}
             isSearched={isSearched}
           />

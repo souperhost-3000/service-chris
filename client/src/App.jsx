@@ -34,10 +34,10 @@ function App() {
     const data = { user_data: [] };
     for (let i = 0; i < reviewData.user_data.length; i += 1) {
       let tt = '';
-      const idx = reviewData.user_data[i].review.indexOf(value);
+      const idx = reviewData.user_data[i].review.toLowerCase().indexOf(value);
       if (idx !== -1 && value !== '') {
         tt += reviewData.user_data[i].review.slice(0, idx);
-        tt += `<mark>${value}</mark>`;
+        tt += `<mark>${reviewData.user_data[i].review.slice(idx, idx + value.length)}</mark>`;
         tt += reviewData.user_data[i].review.slice(idx + value.length);
         const copyData = Object.create(reviewData.user_data[i]);
         copyData.review = tt;
