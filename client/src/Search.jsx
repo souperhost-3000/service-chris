@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import SearchIcon from '@material-ui/icons/Search';
+import CancelIcon from '@material-ui/icons/Cancel';
 
 function Search({ searchClick, search }) {
   const [isClicked, setIsClicked] = useState(false);
@@ -28,9 +29,10 @@ function Search({ searchClick, search }) {
       </div>
       <div className="searchReview">
         <form onSubmit={(event) => { handleSubmit(event); }}>
-          <input type="text" onClick={() => { setIsClicked(true); }} onChange={handleChange} placeholder="Search reviews" />
+          <input id="search" type="text" onClick={() => { setIsClicked(true); }} onChange={handleChange} value={value} placeholder="Search reviews" />
         </form>
       </div>
+      <div className="deleteIcon" onClick={() => { setValue(''); }}><CancelIcon /></div>
     </div>
   );
 }

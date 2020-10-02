@@ -321,6 +321,14 @@ img {
   flex: 1 1 0%;
 }
 
+.deleteIcon {
+  display: flex;
+  cursor: pointer;
+  color: rgb(176, 176, 176)
+}
+.deleteIcon:hover {
+  color: rgb(113, 113, 113);
+}
 input {
   width: 100%;
   border: none;
