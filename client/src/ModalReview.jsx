@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import moment from 'moment';
+import DOMPurify from 'dompurify';
 
 function ModalReview({ review, isSearched }) {
   const body = review.review;
   const [readMore, setReadMore] = useState(false);
   function makeHtml(data) {
-    return { __html: data };
+    return { __html: DOMPurify.sanitize(data) };
   }
 
   useEffect(() => {

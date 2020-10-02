@@ -36,6 +36,7 @@
     "@material-ui/icons": "^4.9.1",
     "axios": "^0.20.0",
     "body-parser": "^1.19.0",
+    "dompurify": "^2.1.1",
     "express": "^4.17.1",
     "faker": "^5.1.0",
     "moment": "^2.29.0",
