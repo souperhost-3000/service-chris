@@ -16,9 +16,13 @@ function Search({ searchClick, search }) {
     setValue(e.target.value);
   }
 
-  function handleSubmit(event) {
+  function handleSubmit(event, goBack) {
     event.preventDefault();
-    search(value);
+    if (goBack) {
+      search('');
+    } else {
+      search(value);
+    }
     return false;
   }
 
@@ -32,7 +36,7 @@ function Search({ searchClick, search }) {
           <input id="search" type="text" onClick={() => { setIsClicked(true); }} onChange={handleChange} value={value} placeholder="Search reviews" />
         </form>
       </div>
-      <div className="deleteIcon" onClick={() => { setValue(''); }}><CancelIcon /></div>
+      <div className="deleteIcon" onClick={(event) => { setValue(''); handleSubmit(event, true); }}><CancelIcon /></div>
     </div>
   );
 }

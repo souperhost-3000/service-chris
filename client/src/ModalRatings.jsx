@@ -27,7 +27,7 @@ function ModalRatings({ ratings, totalReview }) {
       </div>
       <div className="modalRatings">
         {Object.keys(ratings).slice(0, 6).map((rating) => (
-          <div className="modalRate">
+          <div className="modalRate" key={rating + ratings[rating]}>
             <div className="rateName">
               {rating.charAt(0).toUpperCase() + rating.slice(1)}
             </div>

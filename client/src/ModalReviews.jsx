@@ -11,7 +11,11 @@ function ModalReviews({ reviews, searchClick, isSearched, search }) {
       </div>
       <div>
         {reviews.map((review) => (
-          <ModalReview review={review} isSearched={isSearched} />
+          <ModalReview
+            key={review.username + review.createdAt}
+            review={review}
+            isSearched={isSearched}
+          />
         ))}
       </div>
     </div>

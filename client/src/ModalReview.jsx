@@ -29,17 +29,6 @@ function ModalReview({ review, isSearched }) {
       </div>
       <div className="userReviewBottom">
         {isSearched && <div dangerouslySetInnerHTML={makeHtml(body)} />}
-        {/* <div dangerouslySetInnerHTML={makeHtml(body)} /> */}
-        {/* {readMore
-          ? (
-            <div>
-              {`${body.slice(0, 180)}... `}
-              <button type="button" className="readMore" onClick={() => setReadMore(false)}>
-                read more
-              </button>
-            </div>
-          )
-          : body} */}
         {!isSearched && (readMore ? (
           <div>
             {`${body.slice(0, 180)}... `}
