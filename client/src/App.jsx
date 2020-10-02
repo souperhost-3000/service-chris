@@ -13,6 +13,9 @@ function App() {
   const [reviewData, setData] = useState(sampleData);
   const [isShowing, setIsShowing] = useState(false);
   const [close, setClose] = useState(false);
+  const [searchClick, setSearchClick] = useState(false);
+  const [searchData, setSearchData] = useState(undefined);
+  const [isSearched, setIsSearched] = useState(false);
 
   useEffect(() => {
     const ranId = Math.floor(Math.random() * 100 + 1);
@@ -22,12 +25,44 @@ function App() {
   }, []);
 
   const ratings = average(reviewData);
+  function search(value) {
+    if (value === '') {
+      setSearchData(undefined);
+      setIsSearched(false);
+      return;
+    }
+    const data = { user_data: [] };
+    for (let i = 0; i < reviewData.user_data.length; i += 1) {
+      let tt = '';
+      const idx = reviewData.user_data[i].review.toLowerCase().indexOf(value);
+      if (idx !== -1 && value !== '') {
+        tt += reviewData.user_data[i].review.slice(0, idx);
+        tt += `<mark>${reviewData.user_data[i].review.slice(idx, idx + value.length)}</mark>`;
+        tt += reviewData.user_data[i].review.slice(idx + value.length);
+        const copyData = Object.create(reviewData.user_data[i]);
+        copyData.review = tt;
+        data.user_data.push(copyData);
+      }
+    }
+    setSearchData(data);
+    setIsSearched(true);
+  }
+
   function clickOutside(e) {
     if (e.target.className === 'modal') {
       setIsShowing(false);
       setClose(true);
     }
   }
+
+  function handleSearchClick(e) {
+    if (e.target.nodeName !== 'INPUT') {
+      setSearchClick(true);
+    } else {
+      setSearchClick(false);
+    }
+  }
+
   return (
     <div className="review">
       <Total ratings={ratings} totalReview={reviewData.user_data.length} />
@@ -42,13 +77,18 @@ function App() {
       </div>
       {isShowing && (
       <div className="modal" onClick={(e) => { clickOutside(e); }}>
-        <div className={`modalSetting ${isShowing ? 'show' : 'hide'}`}>
+        <div className={`modalSetting ${isShowing ? '' : 'hide'}`} onClick={(e) => { handleSearchClick(e); }}>
           <div className="space">
             <button type="button" className="close" onClick={() => { setIsShowing(false); setClose(true); }}>X</button>
           </div>
           <div className="modalContent">
             <ModalRatings ratings={ratings} totalReview={reviewData.user_data.length} />
-            <ModalReviews reviews={reviewData.user_data} />
+            <ModalReviews
+              reviews={searchData ? searchData.user_data : reviewData.user_data}
+              searchClick={searchClick}
+              search={search}
+              isSearched={isSearched}
+            />
           </div>
         </div>
       </div>
