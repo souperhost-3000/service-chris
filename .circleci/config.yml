@@ -9,7 +9,7 @@ jobs:
     steps:
       - checkout
       - run: npm install
-      - run: npm seed
+      - run: npm run seed
       - run: npm test
 # workflows:
 #   node-tests:
