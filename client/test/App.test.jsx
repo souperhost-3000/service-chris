@@ -1,5 +1,5 @@
-/* eslint-disable */
-import { shallow, mount, render } from 'enzyme';
+import React from 'react';
+import { shallow } from 'enzyme';
 import App from '../src/App';
 import Total from '../src/Total';
 import Ratings from '../src/Ratings';
@@ -10,10 +10,9 @@ describe('<App> Component', () => {
 
   beforeEach(() => {
     wrapper = shallow(<App />);
-  })
+  });
 
   it('renders without crashing', () => {
-    wrapper;
   });
 
   it('renders <Total /> component', () => {
