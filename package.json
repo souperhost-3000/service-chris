@@ -16,7 +16,7 @@
   },
   "jest": {
     "verbose": true,
-    "projects": ["<rootDir>/client/test", "<rootDir>/server/test"],
+    "projects": ["<rootDir>/client/test", "<rootDir>/server/test", "<rootDir>/database/test"],
     "roots": ["<rootDir>/client"],
     "displayName": "client test",
     "transform": {
