@@ -25,4 +25,3 @@ build/
 dist/
 
 bundle.js
-public/bundle.js
