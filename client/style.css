@@ -1,8 +1,8 @@
-body {
+/* body {
   font-family: 'Montserrat';
   padding-left: 80px;
   padding-right: 80px;
-}
+} */
 
 button {
   font-family: 'Montserrat';
@@ -19,6 +19,9 @@ h2 {
 }
 
 .review {
+  font-family: 'Montserrat';
+  padding-left: 80px;
+  padding-right: 80px;
   color: #222222;
   padding-top: 48px;
   padding-bottom: 48px;
