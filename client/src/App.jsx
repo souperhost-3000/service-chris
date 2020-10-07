@@ -49,7 +49,7 @@ function App() {
   }
 
   function clickOutside(e) {
-    if (e.target.className === 'modal') {
+    if (e.target.className === 'Modal') {
       setIsShowing(false);
       setClose(true);
     }
@@ -76,7 +76,7 @@ function App() {
         <button type="button" className="modalButton" onClick={() => { setIsShowing(true); setClose(false); }}>{`Show all ${reviewData.user_data.length} reviews`}</button>
       </div>
       {isShowing && (
-      <div className="modal" onClick={(e) => { clickOutside(e); }}>
+      <div className="Modal" onClick={(e) => { clickOutside(e); }}>
         <div className={`modalSetting ${isShowing ? '' : 'hide'}`} onClick={(e) => { handleSearchClick(e); }}>
           <div className="space">
             <button type="button" className="close" onClick={() => { setIsShowing(false); setClose(true); }}>X</button>
@@ -94,7 +94,7 @@ function App() {
       </div>
       )}
       {close && (
-      <div className="modal hide">
+      <div className="Modal hide">
         <div className="modalSetting hide">
           <div className="space">
             <button type="button" className="close" onClick={() => { setIsShowing(false); setClose(true); }}>X</button>
