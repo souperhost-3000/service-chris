@@ -16,8 +16,14 @@
   },
   "jest": {
     "verbose": true,
-    "projects": ["<rootDir>/client/test", "<rootDir>/server/test", "<rootDir>/database/test"],
-    "roots": ["<rootDir>/client"],
+    "projects": [
+      "<rootDir>/client/test",
+      "<rootDir>/server/test",
+      "<rootDir>/database/test"
+    ],
+    "roots": [
+      "<rootDir>/client"
+    ],
     "displayName": "client test",
     "transform": {
       "^.+\\.[t|j]sx?$": "babel-jest"
@@ -73,7 +79,6 @@
     "jest": "^26.4.2",
     "jest-enzyme": "^7.1.2",
     "jest-react-hooks-shallow": "^1.4.1",
-    "puppeteer": "^5.3.1",
     "style-loader": "^1.2.1"
   }
 }
