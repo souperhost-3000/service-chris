@@ -395,18 +395,22 @@ input {
 @keyframes slideIn {
   from {
     bottom: -150vh;
+    z-index: -1;
   }
   to {
     bottom: 0;
+    z-index: 5;
   }
 }
 
 @keyframes fadeIn {
   from {
     opacity: 0;
+    z-index: -1;
   }
   to {
     opacity: 1;
+    z-index: 5;
   }
 }
 
