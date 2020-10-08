@@ -14,7 +14,7 @@ function Review({ review }) {
     <div className="userReview">
       <div className="userReviewTop">
         <div className="profile">
-          <img src={review.image} alt="" />
+          <img id="profile" src={review.image} alt="" />
         </div>
         <div className="username">
           {review.username}

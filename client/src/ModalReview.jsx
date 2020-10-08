@@ -19,7 +19,7 @@ function ModalReview({ review, isSearched }) {
     <div className="modalUserReview">
       <div className="userReviewTop">
         <div className="profile">
-          <img src={review.image} alt="" />
+          <img id="profile" src={review.image} alt="" />
         </div>
         <div className="username">
           {review.username}
