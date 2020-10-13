@@ -19,8 +19,7 @@
     "verbose": true,
     "projects": [
       "<rootDir>/client/test",
-      "<rootDir>/server/test",
-      "<rootDir>/database/test"
+      "<rootDir>/server/test"
     ],
     "roots": [
       "<rootDir>/client"

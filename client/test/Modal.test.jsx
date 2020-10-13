@@ -35,15 +35,15 @@ describe('Modal Testing', () => {
   it('should render a modal when clicked', () => {
     const wrapper = shallow(<App />);
     wrapper.find('.modalButton').simulate('click');
-    expect(wrapper.find('.modal')).toExist();
+    expect(wrapper.find('.Modal')).toExist();
   });
 
   it('should close a modal when the close button is clicked', () => {
     const wrapper = shallow(<App />);
     wrapper.find('.modalButton').simulate('click');
-    expect(wrapper.find('.modal')).toExist();
+    expect(wrapper.find('.Modal')).toExist();
     wrapper.find('.close').simulate('click');
-    expect(wrapper.find('.modal.hide')).toExist();
+    expect(wrapper.find('.Modal.hide')).toExist();
   });
 
   it('should find search in ModalReviews component', () => {
