@@ -1,3 +1,4 @@
+// eslint-disable-next-line object-curly-newline
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import '../style.css';
@@ -8,6 +9,11 @@ import ModalRatings from './ModalRatings';
 import ModalReviews from './ModalReviews';
 import sampleData from '../sampleData';
 import average from '../utils/average';
+
+// const ModalRatings = lazy(() => import('./ModalRatings'));
+// const ModalReviews = lazy(() => import('./ModalReviews'));
+
+// const renderLoader = () => <p>Loading</p>;
 
 function App() {
   const [reviewData, setData] = useState(sampleData);
@@ -82,6 +88,7 @@ function App() {
             <button type="button" className="close" onClick={() => { setIsShowing(false); setClose(true); }}>X</button>
           </div>
           <div className="modalContent">
+            {/* <Suspense fallback={renderLoader()}> */}
             <ModalRatings ratings={ratings} totalReview={reviewData.user_data.length} />
             <ModalReviews
               reviews={searchData ? searchData.user_data : reviewData.user_data}
@@ -89,6 +96,7 @@ function App() {
               search={search}
               isSearched={isSearched}
             />
+            {/* </Suspense> */}
           </div>
         </div>
       </div>
@@ -100,12 +108,20 @@ function App() {
             <button type="button" className="close" onClick={() => { setIsShowing(false); setClose(true); }}>X</button>
           </div>
           <div className="modalContent">
+            {/* <Suspense fallback={renderLoader()}> */}
             <ModalRatings ratings={ratings} totalReview={reviewData.user_data.length} />
             <ModalReviews reviews={reviewData.user_data} />
+            {/* </Suspense> */}
           </div>
         </div>
       </div>
       )}
+      <div id="staticDiv">
+        <img id="static1" src="https://ghrsea12-fec.s3-us-west-2.amazonaws.com/sample/airbnb-map.webp" alt="" />
+      </div>
+      <div id="staticDiv">
+        <img id="static2" src="https://ghrsea12-fec.s3-us-west-2.amazonaws.com/sample/airbnb-hostedby.webp" alt="" />
+      </div>
     </div>
   );
 }

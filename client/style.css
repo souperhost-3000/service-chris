@@ -8,6 +8,27 @@
   font-family: 'Montserrat';
 } */
 
+#staticDiv {
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+#static1 {
+  width: auto;
+  height: auto;
+  max-width: 1120px;
+  max-height: 900px;
+}
+
+#static2 {
+  width: auto;
+  height: auto;
+  max-width: 1120px;
+  max-height: 800px;
+}
+
 h1 {
   margin-top: 0px;
   font-size: 30px;
@@ -57,7 +78,7 @@ h2 {
 }
 
 .ratings {
-  display: none;
+  display: block;
 }
 
 .rate {
@@ -113,7 +134,7 @@ h2 {
 }
 
 .userReview {
-  width: 100%;
+  width: 40%;
   margin-right: 8%;
   padding-left: 8px;
   padding-right: 8px;
@@ -358,7 +379,7 @@ input {
   background-color: yellow;
 }
 
-@media (min-width: 1128px) {
+/* @media (min-width: 1128px) {
   body {
     padding-left: 80px;
     padding-right: 80px;
@@ -390,7 +411,7 @@ input {
     padding-left: 24px;
     padding-right: 24px;
   }
-}
+} */
 
 @keyframes slideIn {
   from {
