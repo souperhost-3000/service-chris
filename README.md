@@ -15,8 +15,8 @@ Install dependencies, build webpack bundle, and start the application\
 Open a browser and navigate to localhost: 3007
 
 ## Related Projects
-[Gallery] (https://github.com/souperhost-3000/service-eric)
-[Check Availability Calendar] (https://github.com/souperhost-3000/service-day-glow)
-[Related Items] (https://github.com/souperhost-3000/service-dannyhannyford)
+[Gallery] (https://github.com/souperhost-3000/service-eric)\
+[Check Availability Calendar] (https://github.com/souperhost-3000/service-day-glow)\
+[Related Items] (https://github.com/souperhost-3000/service-dannyhannyford)\
 
 ## Table of Contents
