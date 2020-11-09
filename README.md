@@ -5,11 +5,14 @@ Welcome to Souperhost-3000 Review Module! Souperhost-3000 is an open-source acco
 ## Getting Started
 Clone the repository. 
 `$ git clone https://github.com/souperhost-3000/service-chris.git`\
+
 Install dependencies, build webpack bundle, and start the application\
+
 `$ npm install`\
 `$ npm run build`\
 `$ npm start`\
-Open a browser and navigate to localhost: 3007\
+
+Open a browser and navigate to localhost: 3007
 
 ## Related Projects
 [Gallery] (https://github.com/souperhost-3000/service-eric)
