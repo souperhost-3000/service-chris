@@ -12,8 +12,7 @@ Welcome to Souperhost-3000 Review Module! Souperhost-3000 is an open-source acco
 ## Table of Contents
 
 1. [Requirements](#requirements)
-1. [Getting Started](#getting started)
-1. [Usage](#Usage)
+1. [Getting Started](#getting-started)
 
 ## Requirements
 
@@ -41,8 +40,4 @@ Install dependencies, build webpack bundle, and start the application
 > Start node.js server
 
 Open a browser and navigate to localhost: 3007
-
-## Usage
-
-> Some usage instructions
 
