@@ -12,7 +12,7 @@ Welcome to Souperhost-3000 Review Module! Souperhost-3000 is an open-source acco
 ## Table of Contents
 
 1. [Requirements](#requirements)
-1. [Getting Started](#gettingstarted)
+1. [Getting Started](#getting started)
 1. [Usage](#Usage)
 
 ## Requirements
