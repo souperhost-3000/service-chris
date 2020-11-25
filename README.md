@@ -8,13 +8,13 @@ Clone the repository.
 
 Install dependencies, build webpack bundle, and start the application
 
-`$ npm install`\
+`$ npm install`
 > Install dependencies
 
-`$ npm run seed`\
+`$ npm run seed`
 > Generate data in MongoDB
 
-`$ npm run build`\
+`$ npm run build`
 > Run webpack to created bundle.js
 
 `$ npm start`
