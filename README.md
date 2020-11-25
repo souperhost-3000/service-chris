@@ -9,8 +9,16 @@ Clone the repository.
 Install dependencies, build webpack bundle, and start the application
 
 `$ npm install`\
+> Install dependencies
+
+`$ npm run seed`\
+> Generate data in MongoDB
+
 `$ npm run build`\
+> Run webpack to created bundle.js
+
 `$ npm start`
+> Start node.js server
 
 Open a browser and navigate to localhost: 3007
 
